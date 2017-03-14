@@ -1,12 +1,23 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import List from './List'
+import Form from './Form'
 
 var USER_DATA={
   name: "Eric Han",
   username: "Scoobaroo",
   image: "https://s-media-cache-ak0.pinimg.com/originals/d4/e7/aa/d4e7aa60eb6a782d5d25340debaa1ad6.jpg"
 }
+
+var LIST_DATA = {
+                  item1: "Having a House over my Head",
+                  item2: "Having a supportive Family",
+                  item3: "Having a wonderful sponsor",
+                  item4: "Having the gym",
+                  item5: "Having wonderful friends around"
+                }
+
 
 class App extends Component {
 
@@ -19,6 +30,8 @@ class App extends Component {
           <div>{this.props.name}</div>
         </div>
         <Avatar user={USER_DATA} />
+        <List list={LIST_DATA} />
+        <Form />
       </div>
     );
   }
